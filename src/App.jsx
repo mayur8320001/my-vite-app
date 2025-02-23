@@ -13,6 +13,7 @@ import { Box } from '@mui/material';
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogsPage from './pages/BlogsPage';
 import BlogDetailsPage from './pages/BlogsDetailsPage';
+
 // import CustomerSlider from './components/CustomersSlider';
 
 // Mock Data
