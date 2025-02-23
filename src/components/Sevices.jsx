@@ -13,7 +13,7 @@ const useServices = () => {
 
   useEffect(() => {
     const loadServices = async () => {
-      const files = import.meta.glob('/services_posts/**/*.md', { query: '?raw', import: 'default' });
+      const files = import.meta.glob('/services_posts/**/*.md', { as: 'raw' });
 
       const items = await Promise.all(
         Object.entries(files).map(async ([path, resolver]) => {
@@ -35,7 +35,7 @@ const useServices = () => {
 const ServiceCard = ({ service }) => {
   return (
     <motion.div initial="hidden" animate="visible" variants={cardVariants}>
-      <Card sx={{ maxWidth: 360, margin: 'auto', borderRadius: '10px', boxShadow: 3, backgroundColor: 'transparent', backdropFilter: 'blur(10px)' }}>
+      <Card sx={{p:2, maxWidth: 345, margin: 'auto', borderRadius: '16px', boxShadow: 3, backgroundColor: 'transparent', backdropFilter: 'blur(10px)' }}>
         <CardMedia 
            sx={{transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.05)" },}}
@@ -47,10 +47,10 @@ const ServiceCard = ({ service }) => {
         
         <CardContent>
           
-          <Typography gutterBottom variant="h5" component="div" >
+          <Typography gutterBottom variant="h5" component="div" color="white">
             {service.title}
           </Typography>
-          <Typography variant="body2" >
+          <Typography variant="body2" color="white">
             {service.excerpt}
           </Typography>
         </CardContent>
@@ -63,11 +63,11 @@ const ServiceCards = () => {
   const services = useServices();
 
   return (
-    <div style={{ display: 'grid', marginTop: '10px',marginBottom: '10px',gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '10px', padding: '5px',  }}>
+    <contain style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '10px', padding: '5px', background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
       {services.map((service, index) => (
         <ServiceCard key={index} service={service} />
       ))}
-    </div>
+    </contain>
   );
 };
 
