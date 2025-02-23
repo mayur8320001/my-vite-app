@@ -103,7 +103,7 @@ const LandingPage = () => {
         </Box>
         </Box>
      
-      <Box sx={{p:0, borderRadius: "16px",m:0, backgroundColor: theme.palette.mode === 'light' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'}}>
+      <Box sx={{p:0, borderRadius: "16px",m:2, backgroundColor: theme.palette.mode === 'light' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)'}}>
       <Typography variant="h4" sx={{ marginBottom: 0,marginTop: 3 }}>
             <strong>Here are our services </strong>
           </Typography>
