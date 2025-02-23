@@ -51,7 +51,7 @@ const services = [
   { name: 'Software Services', icon: Computer, path: '/software-development', des: 'Build strategic funnels that will drive your customers to convert.' },
 ];
 const serve = [
-  {  name: 'Product Consulting', des: 'Guidance for startup success', icon: BusinessCenterIcon,  path: '/software-development'},
+  {  name: 'Product Consulting', des: 'Guidance for startup successs', icon: BusinessCenterIcon,  path: '/software-development'},
   {  name: 'Product Discovery Phase', des: 'Refine ideas into solutions', icon: LightbulbIcon ,  path: '/software-development' },
   { name: 'Product UI/UX Design', des: 'Designs that captivate users', icon: DesignServicesIcon ,  path: '/software-development' },
   { name: 'MVP Development', des: 'Launch your MVP faster', icon: RocketLaunchIcon ,  path: '/software-development' },
