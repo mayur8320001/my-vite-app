@@ -13,7 +13,7 @@ const useServices = () => {
 
   useEffect(() => {
     const loadServices = async () => {
-      const files = import.meta.glob('/services_posts/**/*.md', { as: 'raw' });
+      const files = import.meta.glob('/services_posts/**/*.md', { query: '?raw', import: 'default' });
 
       const items = await Promise.all(
         Object.entries(files).map(async ([path, resolver]) => {

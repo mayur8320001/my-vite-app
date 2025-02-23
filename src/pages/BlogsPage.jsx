@@ -9,7 +9,7 @@ const useBlogs = () => {
 
   useEffect(() => {
     const loadBlogs = async () => {
-      const files = import.meta.glob("/public/blogs/**/*.md", { as: "raw" });
+      const files = import.meta.glob("/public/blogs/**/*.md", { query: '?raw', import: 'default' });
 
       const items = await Promise.all(
         Object.entries(files).map(async ([path, resolver]) => {

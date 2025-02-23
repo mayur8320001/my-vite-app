@@ -16,7 +16,7 @@ const useProducts = () => {
 
   useEffect(() => {
     const loadProducts = async () => {
-      const files = import.meta.glob("/public/products/**/*.md", { as: "raw" });
+      const files = import.meta.glob("/public/products/**/*.md", { query: '?raw', import: 'default' });
 
       const items = await Promise.all(
         Object.entries(files).map(async ([path, resolver]) => {
