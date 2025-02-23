@@ -75,7 +75,7 @@ const LandingPage = () => {
         <Typography variant="h3" fontWeight="bold">Welcome to Aarkay Tech Solutions</Typography>
         <Typography variant="h4" fontWeight="bold">Conjointly moving forward with Technology</Typography>  
         <Typography variant="h5" fontWeight="bold">
-          Serving for 28 years, providing innovative IT solutions tailored to your needs.
+        Serving since 28 Years in providing complete IT Solutions depending on the customer needs and requirements. We deliver much more than just technology.
         </Typography>
         <Button
           variant="contained"
