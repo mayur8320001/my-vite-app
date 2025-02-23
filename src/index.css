@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+#root {
+  min-height: 100vh; /* Ensure the root element takes up at least the full viewport height */
+  display: flex;
+  flex-direction: column; /* Allows footer to stick to the bottom */
+}

@@ -1,0 +1,528 @@
+website problems
+
+
+BOOT UP TIME: 1 min 27 seconds till landing page visible at all. additional time for loading assets.
+
+
+
+assets required: 
+
+
+landing page carousel images at 2k resolution. (1980px * 1080px) landscape 
+
+logo images with and without name. square 
+
+
+about page image: square 
+
+HD.
+
+
+blog page images for blogs + content square
+
+
+our products images.  
+
+
+our valued customers + our partners images and logos
+
+
+
+
+
+
+
+ {/* <NavDropdown
+            className="pr-2 py-2 align-text-top"
+            title="Products"
+            id="basic-nav-dropdown"
+          >
+            <Container className="eventsNav pt-0 mt-0 ">
+              <Row>
+                <Col className="text-left">
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"concierge-bell"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Barcode {"&"} RFID Systems
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        1d Scanners
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        2d Scanners
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Barcode Printers
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Fixed Mount ID terminal
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Hand-held Terminals
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Presentation Scanners
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        RFID Readers
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Vehicle Mount Terminal
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Vision Systems
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Divider />
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"chalkboard-teacher"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Sensors and Devices
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Ultrasonic Sensors
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Proximity Sensors
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Photoelectric Sensors
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Industrial Vision Sensors
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Inclination {"&"} Acceleration Sensors
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Automation 4.0
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Light Curtains {"&"} Control
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Touch POS / Kiosk
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Rotary Encoders
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                </Col>
+                <Col className="text-left">
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"building"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Customized Software
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Android and Mobile Based Solutions
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Barcode Printing System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Fabric Inspection Data Logger
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Storage and Dispatch Management
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Tracking {"&"} Tracing Solutions
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Industrial Integrated Solutions
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Weighbridge Integrated System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Divider />
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"sun"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Positioning Systems
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Positioning Encoding System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Inductive Distance Measuring System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Inductive Position Coding System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Data Matrix Positioning System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Divider />
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"sun"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    IT Infrastructure
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Industrial WiFi Products
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Servers
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Networking Products and Services
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                </Col>
+                <Col className="text-left">
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"concierge-bell"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Security Surveillance
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        IP Surveillance
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Home Security System
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Intrusion Alarm
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Biometric Solutions
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Building Management
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Access Control
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Divider />
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"sun"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Antivirus
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Kaspersky
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Bitdefender
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Divider />
+                  <Dropdown.Header>
+                    <FontAwesomeIcon
+                      color="black"
+                      icon={"sun"}
+                      size="1x"
+                      className="pr-1"
+                    />
+                    Package Software
+                  </Dropdown.Header>
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Accounting and Inventory Software
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Multi-lingual Software
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+
+                  <Dropdown.Item className="dropdown-item">
+                    <Link href="/">
+                      <a className="nav-link" role="button">
+                        Retail Software
+                      </a>
+                    </Link>
+                  </Dropdown.Item>
+                </Col>
+              </Row>
+            </Container>
+          </NavDropdown> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <ul className="my-3 list-unstyled product-list">
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted  "
+                  >
+                    Barcode-based Material Tracking System or WIP
+                  </a>
+                </li>
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted"
+                  >
+                    Warehouse Management System
+                  </a>
+                </li>
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted"
+                  >
+                    Dispatch Management System
+                  </a>
+                </li>
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted"
+                  >
+                    Industry Automation for Overhead Crane, Weighbridge, etc.
+                  </a>
+                </li>
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted"
+                  >
+                    Android and Mobility Based Solutions
+                  </a>
+                </li>
+                <li className="list-item  mt-3">
+                  <a
+                    href="#"
+                    className="social-link text-decoration-none text-muted"
+                  >
+                    Retail Outlets and Distribution Solution
+                  </a>
+                </li>
+              </ul>
