@@ -29,8 +29,7 @@
     "react-tsparticles": "^2.12.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.2.4",
-    "tsparticles": "^3.8.1",
-    "vite-plugin-md": "^0.22.5"
+    "tsparticles": "^3.8.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
