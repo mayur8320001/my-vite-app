@@ -91,12 +91,7 @@ const LandingPage = () => {
        
     
       <Box sx={{p:4,mt:2, borderRadius: "16px", backgroundColor: theme.palette.mode === 'light' ? 'rgba(255, 255, 255, 0.7)' : ''}}>
-        <Typography variant="h4" fontWeight="bold">Our Services</Typography>
-        <Typography variant="body1" fontWeight="bold">
-          Enhancing business productivity through innovative, process-driven technology solutions.
-        </Typography>
-     
-        <Box display="grid" sx={{ mt: 2 }} gridTemplateColumns={{ xs: "1fr",sm: "1fr 1fr", md: "1fr 1fr 1fr" }} gap={4}>
+     <Box display="grid" sx={{ mt: 2 }} gridTemplateColumns={{ xs: "1fr",sm: "1fr 1fr", md: "1fr 1fr 1fr" }} gap={4}>
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}

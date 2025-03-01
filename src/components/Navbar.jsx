@@ -38,18 +38,6 @@ const StyledNavLink = styled(NavLink)(({ theme }) => ({
   },
 }));
 
-// Styled Popover Content
-const PopoverContent = styled(Box)(({ theme }) => ({
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-  gap: theme.spacing(2),
-  padding: theme.spacing(2),
-  maxWidth: '800px',
-  backgroundColor: theme.palette.background.paper,
-  boxShadow: theme.shadows[5],
-  borderRadius: theme.shape.borderRadius,
-}));
-
 // Navigation links and services
 const navLinks = [
   { name: 'Products', path: '/products' },
@@ -153,19 +141,17 @@ const Navbar = ({ mode, toggleColorMode }) => {
             disableRestoreFocus
             onMouseLeave={handleClose1}
           >
-            <PopoverContent>
-              {services.map((service) => (
-                <NavLink key={service.name} to={service.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose1}>
-                  <MenuItem sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <service.icon sx={{ fontSize: 20 }} />
-                    <Box>
-                      <Typography variant="body1" sx={{ fontWeight: 500 }}>{service.name}</Typography>
-                      <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{service.des}</Typography>
-                    </Box>
-                  </MenuItem>
-                </NavLink>
-              ))}
-            </PopoverContent>
+            {services.map((service) => (
+              <NavLink key={service.name} to={service.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose1}>
+                <MenuItem>
+                  <service.icon sx={{ mr: 1, fontSize: 20 }} />
+                  <Box>
+                    <Typography variant="body1" sx={{ fontWeight: 500 }}>{service.name}</Typography>
+                    <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{service.des}</Typography>
+                  </Box>
+                </MenuItem>
+              </NavLink>
+            ))}
           </Popover>
 
           {/* Who we serve */}
@@ -194,19 +180,17 @@ const Navbar = ({ mode, toggleColorMode }) => {
             disableRestoreFocus
             onMouseLeave={handleClose2}
           >
-            <PopoverContent>
-              {serve.map((serve) => (
-                <NavLink key={serve.name} to={serve.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose2}>
-                  <MenuItem sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <serve.icon sx={{ fontSize: 20 }} />
-                    <Box>
-                      <Typography variant="body1" sx={{ fontWeight: 500 }}>{serve.name}</Typography>
-                      <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{serve.des}</Typography>
-                    </Box>
-                  </MenuItem>
-                </NavLink>
-              ))}
-            </PopoverContent>
+            {serve.map((serve) => (
+              <NavLink key={serve.name} to={serve.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose2}>
+                <MenuItem>
+                  <serve.icon sx={{ mr: 1, fontSize: 20 }} />
+                  <Box>
+                    <Typography variant="body1" sx={{ fontWeight: 500 }}>{serve.name}</Typography>
+                    <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{serve.des}</Typography>
+                  </Box>
+                </MenuItem>
+              </NavLink>
+            ))}
           </Popover>
 
           {/* Solutions Dropdown */}
@@ -235,16 +219,16 @@ const Navbar = ({ mode, toggleColorMode }) => {
             disableRestoreFocus
             onMouseLeave={handleClose3}
           >
-            <PopoverContent sx={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-              {solution.map((solution) => (
-                <NavLink key={solution.name} to={solution.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose3}>
-                  <MenuItem sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+            {solution.map((solution) => (
+              <NavLink key={solution.name} to={solution.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose3}>
+                <MenuItem>
+                  <Box>
                     <Typography variant="body1" sx={{ fontWeight: 500 }}>{solution.name}</Typography>
                     <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{solution.des}</Typography>
-                  </MenuItem>
-                </NavLink>
-              ))}
-            </PopoverContent>
+                  </Box>
+                </MenuItem>
+              </NavLink>
+            ))}
           </Popover>
 
           {/* Other Links */}
