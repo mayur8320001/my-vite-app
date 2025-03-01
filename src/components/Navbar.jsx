@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Toolbar, Box, IconButton, Drawer, List, ListItem, ListItemText, Button, useTheme, Menu, MenuItem, Typography, Popover } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import { styled } from '@mui/system';
@@ -38,6 +38,18 @@ const StyledNavLink = styled(NavLink)(({ theme }) => ({
   },
 }));
 
+// Styled Popover Content
+const PopoverContent = styled(Box)(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+  gap: theme.spacing(2),
+  padding: theme.spacing(2),
+  maxWidth: '800px',
+  backgroundColor: theme.palette.background.paper,
+  boxShadow: theme.shadows[5],
+  borderRadius: theme.shape.borderRadius,
+}));
+
 // Navigation links and services
 const navLinks = [
   { name: 'Products', path: '/products' },
@@ -63,19 +75,40 @@ const serve = [
   { name: 'CTO as a Service', des: 'Grow faster with strategic tech leadership', icon: LeaderboardIcon, path: '/software-development' },
 ];
 
+const solution = [
+  { name: "Financial Management", des: 'Strategic consulting for growth' },
+  { name: "Workforce Management", des: 'Streamline workforce operations' },
+  { name: "Human Resource Management", des: 'Optimize HR processes' },
+  { name: "eLearning", des: 'Digitalize your learning journey' },
+  { name: "Supply Chain Management", des: 'Improve supply chain efficiency' },
+  { name: "Fleet Management", des: 'Strengthen customer relationships' },
+  { name: "CRM", des: 'Strategic consulting for growth' },
+  { name: "Operations Management", des: 'Optimize operational processes' },
+  { name: "Asset Management", des: 'Improve asset optimization' },
+  { name: "Web Portals", des: 'Transform web experiences' },
+  { name: "Content Management System", des: 'Cost-effective content management' },
+  { name: "Enterprise Resource Planning", des: 'Enhance enterprise efficiency' },
+  { name: "Document Management", des: 'Digitize documents seamlessly' },
+  { name: "Robotic Process Automation", des: 'Automate, Simplify, Excel' },
+];
+
 const Navbar = ({ mode, toggleColorMode }) => {
   const theme = useTheme();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorE2, setAnchorE2] = useState(null);
+  const [anchorE3, setAnchorE3] = useState(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileServeOpen, setMobileServeOpen] = useState(false);
+  const [mobileSolutionOpen, setMobileSolutionOpen] = useState(false);
 
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
   const handleClick1 = (event) => setAnchorEl(event.currentTarget);
   const handleClick2 = (event) => setAnchorE2(event.currentTarget);
+  const handleClick3 = (event) => setAnchorE3(event.currentTarget);
   const handleClose1 = () => setAnchorEl(null);
   const handleClose2 = () => setAnchorE2(null);
+  const handleClose3 = () => setAnchorE3(null);
 
   return (
     <AppBar position="static" sx={{ background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)', width: 'auto' }}>
@@ -120,17 +153,19 @@ const Navbar = ({ mode, toggleColorMode }) => {
             disableRestoreFocus
             onMouseLeave={handleClose1}
           >
-            {services.map((service) => (
-              <NavLink key={service.name} to={service.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose1}>
-                <MenuItem>
-                  <service.icon sx={{ mr: 1, fontSize: 20 }} />
-                  <Box>
-                    <Typography variant="body1" sx={{ fontWeight: 500 }}>{service.name}</Typography>
-                    <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{service.des}</Typography>
-                  </Box>
-                </MenuItem>
-              </NavLink>
-            ))}
+            <PopoverContent>
+              {services.map((service) => (
+                <NavLink key={service.name} to={service.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose1}>
+                  <MenuItem sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <service.icon sx={{ fontSize: 20 }} />
+                    <Box>
+                      <Typography variant="body1" sx={{ fontWeight: 500 }}>{service.name}</Typography>
+                      <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{service.des}</Typography>
+                    </Box>
+                  </MenuItem>
+                </NavLink>
+              ))}
+            </PopoverContent>
           </Popover>
 
           {/* Who we serve */}
@@ -159,17 +194,57 @@ const Navbar = ({ mode, toggleColorMode }) => {
             disableRestoreFocus
             onMouseLeave={handleClose2}
           >
-            {serve.map((serve) => (
-              <NavLink key={serve.name} to={serve.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose2}>
-                <MenuItem>
-                  <serve.icon sx={{ mr: 1, fontSize: 20 }} />
-                  <Box>
-                    <Typography variant="body1" sx={{ fontWeight: 500 }}>{serve.name}</Typography>
-                    <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{serve.des}</Typography>
-                  </Box>
-                </MenuItem>
-              </NavLink>
-            ))}
+            <PopoverContent>
+              {serve.map((serve) => (
+                <NavLink key={serve.name} to={serve.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose2}>
+                  <MenuItem sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <serve.icon sx={{ fontSize: 20 }} />
+                    <Box>
+                      <Typography variant="body1" sx={{ fontWeight: 500 }}>{serve.name}</Typography>
+                      <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{serve.des}</Typography>
+                    </Box>
+                  </MenuItem>
+                </NavLink>
+              ))}
+            </PopoverContent>
+          </Popover>
+
+          {/* Solutions Dropdown */}
+          <Button
+            aria-controls="solutions-menu"
+            aria-haspopup="true"
+            onClick={handleClick3}
+            onMouseEnter={handleClick3}
+            endIcon={<ArrowDropDown />}
+          >
+            Solutions
+          </Button>
+          <Popover
+            id="solutions-menu"
+            open={Boolean(anchorE3)}
+            anchorEl={anchorE3}
+            onClose={handleClose3}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            disableRestoreFocus
+            onMouseLeave={handleClose3}
+          >
+            <PopoverContent sx={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+              {solution.map((solution) => (
+                <NavLink key={solution.name} to={solution.path} style={{ textDecoration: 'none', color: 'inherit' }} onClick={handleClose3}>
+                  <MenuItem sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                    <Typography variant="body1" sx={{ fontWeight: 500 }}>{solution.name}</Typography>
+                    <Typography variant="body2" sx={{ fontSize: '0.75rem', color: theme.palette.text.secondary }}>{solution.des}</Typography>
+                  </MenuItem>
+                </NavLink>
+              ))}
+            </PopoverContent>
           </Popover>
 
           {/* Other Links */}
@@ -213,6 +288,17 @@ const Navbar = ({ mode, toggleColorMode }) => {
             <ListItem key={serve.name} button onClick={toggleDrawer}>
               <StyledNavLink to={serve.path}>
                 <ListItemText primary={serve.name} />
+              </StyledNavLink>
+            </ListItem>
+          ))}
+          <ListItem button onClick={() => setMobileSolutionOpen(!mobileSolutionOpen)}>
+            <ListItemText primary="Solutions" />
+            {mobileSolutionOpen ? <ArrowDropUp /> : <ArrowDropDown />}
+          </ListItem>
+          {mobileSolutionOpen && solution.map((solution) => (
+            <ListItem key={solution.name} button onClick={toggleDrawer}>
+              <StyledNavLink to={solution.path}>
+                <ListItemText primary={solution.name} />
               </StyledNavLink>
             </ListItem>
           ))}

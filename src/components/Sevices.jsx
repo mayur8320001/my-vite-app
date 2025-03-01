@@ -35,7 +35,7 @@ const useServices = () => {
 const ServiceCard = ({ service }) => {
   return (
     <motion.div initial="hidden" animate="visible" variants={cardVariants}>
-      <Card sx={{p:2, maxWidth: 345, margin: 'auto', borderRadius: '16px', boxShadow: 3, backgroundColor: 'transparent', backdropFilter: 'blur(10px)' }}>
+      <Card sx={{p:0, maxWidth: 345, margin: 'auto', borderRadius: '16px', boxShadow: 3, backgroundColor: 'transparent', backdropFilter: 'blur(10px)' }}>
         <CardMedia 
            sx={{transition: "transform 0.3s ease",
             "&:hover": { transform: "scale(1.05)" },}}
@@ -47,10 +47,10 @@ const ServiceCard = ({ service }) => {
         
         <CardContent>
           
-          <Typography gutterBottom variant="h5" component="div" color="white">
+          <Typography gutterBottom variant="h5" component="div" color="">
             {service.title}
           </Typography>
-          <Typography variant="body2" color="white">
+          <Typography variant="body2" color="">
             {service.excerpt}
           </Typography>
         </CardContent>
@@ -63,11 +63,11 @@ const ServiceCards = () => {
   const services = useServices();
 
   return (
-    <contain style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '10px', padding: '5px', background: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(10px)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '10px', padding: '5px' }}>
       {services.map((service, index) => (
         <ServiceCard key={index} service={service} />
       ))}
-    </contain>
+    </div>
   );
 };
 
